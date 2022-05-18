@@ -1,0 +1,19 @@
+{{ next_data('artalk', {
+  lang: page.lang | default('zh-CN', true)
+}, config.artalk, {
+  el: '#artalk',
+  pageKey: url_for(page.path) | replace(r/index\.html$/, '')
+}) }}
+
+<link rel="stylesheet" href="{{ config.artalk.cssUrl }}">
+<style>.artalk{width: initial; font-family: initial}</style>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.artalk.el).then(() => 
+    NexT.utils.getScript(CONFIG.artalk.jsUrl, { condition: window.Artalk })
+  ).then(() => {
+    new Artalk(CONFIG.artalk);
+  });
+});
+</script>

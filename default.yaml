@@ -1,0 +1,19 @@
+# Artalk Config File
+# For more information: https://artalk.js.org
+
+artalk:
+  enable: false
+
+  # Server address url, you should set this to your own link
+  server: https://artalk.example.com
+
+  # JS CDN url, you can set this to your preferred CDN
+  jsUrl: https://unpkg.com/artalk@2/dist/Artalk.js
+
+  # CSS styles CDN url, you can set this to your preferred CDN
+  cssUrl: https://unpkg.com/artalk@2/dist/Artalk.css
+
+  # Pageviews count
+  pageview: true
+
+  #commentCount: true
