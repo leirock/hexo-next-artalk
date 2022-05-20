@@ -5,7 +5,6 @@
 const Util = require('@next-theme/utils');
 const utils = new Util(hexo, __dirname);
 
-/*
 const capitalize = (input) =>
   input.toString().charAt(0).toUpperCase() + input.toString().substr(1);
 
@@ -20,7 +19,6 @@ const iconText = (icon, key, defaultValue = capitalize(key)) =>
     {%- endif %}
     <span class="post-meta-item-text">{{ post_meta_comment + __('symbol.colon') }}</span>
   `;
-*/
 
 // Add comment
 hexo.extend.filter.register('theme_inject', (injects) => {
@@ -50,7 +48,7 @@ hexo.extend.filter.register('theme_inject', (injects) => {
   if (!config.enable || !config.server) return;
 
   if (config.pageview) {
-/*
+
     injects.postMeta.raw(
       'artalk_comments',
       `
@@ -58,7 +56,7 @@ hexo.extend.filter.register('theme_inject', (injects) => {
     <span class="post-meta-item">
       ${iconText('far fa-comment', 'artalk')}
       <a title="artalk" href="{{ url_for(post.path) }}#artalk" itemprop="discussionUrl">
-        <span class="post-comments-count atk-comment-count-num" data-path="{{ url_for(post.path) }}" itemprop="commentCount"></span>
+        <span id="ArtalkCount" class="post-comments-count" data-page-key="{{ url_for(post.path) }}"  itemprop="commentCount"></span>
       </a>
     </span>
     {% endif %}
@@ -66,17 +64,17 @@ hexo.extend.filter.register('theme_inject', (injects) => {
       {},
       {}
     );
-*/
+
     injects.postMeta.raw(
       'artalk_pageview',
       `
-    {% if is_post()  %}
+    {% if config.artalk.pageview %}
     <span class="post-meta-item" title="{{ __('post.views') }}">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
       <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
-      <span id="ArtalkPV"></span>
+      <span id="ArtalkPV" data-page-key="{{ url_for(post.path) }}" ></span>
     </span>
     {% endif %}
   `,

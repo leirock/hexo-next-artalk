@@ -32,4 +32,7 @@ artalk:
 
   # Pageviews count
   pageview: true
+
+  # Comments count
+  commentCount: true
 ```

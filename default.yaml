@@ -16,4 +16,4 @@ artalk:
   # Pageviews count
   pageview: true
 
-  #commentCount: true
+  commentCount: true
