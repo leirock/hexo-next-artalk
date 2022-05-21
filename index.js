@@ -38,15 +38,15 @@ hexo.extend.filter.register('theme_inject', (injects) => {
     injects.postMeta.raw(
       'artalk_comment_count',
       `
-    {% if post.comments and config.artalk.commentCount %}
-    <span class="post-meta-item">
-      ${iconText('far fa-comment', 'artalk')}
-      <a title="artalk" href="{{ url_for(post.path) }}#artalk" itemprop="discussionUrl">
-        <span id="ArtalkCount" class="post-comments-count" data-page-key="{{ url_for(post.path) }}" itemprop="commentCount"></span>
-      </a>
-    </span>
-    {% endif %}
-    `,
+        {% if post.comments and config.artalk.commentCount %}
+        <span class="post-meta-item">
+          ${iconText('far fa-comment', 'artalk')}
+          <a title="artalk" href="{{ url_for(post.path) }}#artalk" itemprop="discussionUrl">
+            <span id="ArtalkCount" class="post-comments-count" data-page-key="{{ url_for(post.path) }}" itemprop="commentCount"></span>
+          </a>
+        </span>
+        {% endif %}
+      `,
       {},
       {}
     );
@@ -54,16 +54,16 @@ hexo.extend.filter.register('theme_inject', (injects) => {
     injects.postMeta.raw(
       'artalk_pv_count',
       `
-    {% if config.artalk.pvCount %}
-    <span class="post-meta-item" title="{{ __('post.views') }}">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
-      <span id="ArtalkPV" data-page-key="{{ url_for(post.path) }}" ></span>
-    </span>
-    {% endif %}
-  `,
+        {% if config.artalk.pvCount %}
+        <span class="post-meta-item" title="{{ __('post.views') }}">
+          <span class="post-meta-item-icon">
+            <i class="far fa-eye"></i>
+          </span>
+          <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
+          <span id="ArtalkPV" data-page-key="{{ url_for(post.path) }}" ></span>
+        </span>
+        {% endif %}
+      `,
       {},
       {}
     );

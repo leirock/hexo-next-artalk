@@ -6,6 +6,7 @@
 }) }}
 
 <link rel="stylesheet" href="{{ config.artalk.cssUrl }}">
+<style>.artalk{width:initial;}</style>
 
 <script{{ pjax }} type="text/javascript">
 ;(function() {
@@ -13,7 +14,7 @@
 
     NexT.utils.loadComments(CONFIG.artalk.el)
       .then(() => NexT.utils.getScript(CONFIG.artalk.jsUrl, {
-          condition: window.Artalk 
+        condition: window.Artalk 
       }))
       .then(() => {
         new Artalk(CONFIG.artalk);

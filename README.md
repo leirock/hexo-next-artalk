@@ -1,6 +1,7 @@
 # Artalk for Hexo NexT
 
 ![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)
+![Artalk Version](https://img.shields.io/badge/Artalk-v2.3.1+-558fb5?style=flat-square)
 
 An [Artalk](https://artalk.js.org) comment system plugin for Hexo NexT.
 
@@ -12,7 +13,7 @@ npm install leirock/hexo-next-artalk
 
 ## Configure
 
-Set the value `enable` to `true`, add `server`, and edit other configurations in `artalk` section in the config file as following. You can config those in both `_config.yml` or `_config.next.yml`:
+Set the value `enable` to `true`, add `server`, and edit other configurations in `artalk` section in the config file as following. You can config those in Hexo's root config file `_config.yml`:
 
 ```yaml
 # Artalk Config File
