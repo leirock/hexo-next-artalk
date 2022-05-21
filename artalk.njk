@@ -1,19 +1,37 @@
-{{ next_data('artalk', {
-  lang: page.lang | default('zh-CN', true)
-}, config.artalk, {
+{{ next_data('artalk', config.artalk, {
   el: '#artalk',
-  pageKey: url_for(page.path) | replace(r/index\.html$/, '')
+  pageKey: url_for(page.path) | replace(r/index\.html$/, ''),
+  pageTitle: page.title,
+  locale: page.lang | default('zh-CN', true)
 }) }}
 
 <link rel="stylesheet" href="{{ config.artalk.cssUrl }}">
-<style>.artalk{width:initial;font-family:inherit}</style>
 
 <script{{ pjax }} type="text/javascript">
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.artalk.el).then(() =>
-    NexT.utils.getScript(CONFIG.artalk.jsUrl, { condition: window.Artalk })
-  ).then(() => {
-    new Artalk(Object.assign({}, CONFIG.artalk,{ el: document.querySelector(CONFIG.artalk.el) }));
-  });
-});
+;(function() {
+  if (CONFIG.page.comments) {
+
+    NexT.utils.loadComments(CONFIG.artalk.el)
+      .then(() => NexT.utils.getScript(CONFIG.artalk.jsUrl, {
+          condition: window.Artalk 
+      }))
+      .then(() => {
+        new Artalk(CONFIG.artalk);
+      });
+
+  } else {
+
+    NexT.utils.getScript(CONFIG.artalk.jsUrl, {
+      condition: window.Artalk 
+    }).then(() => {
+      Artalk.LoadCountWidget({
+        server: CONFIG.artalk.server,
+        site: CONFIG.artalk.site,
+        pvEl: '#ArtalkPV',
+        countEl: '#ArtalkCount',
+      });
+    })
+
+  }
+})();
 </script>

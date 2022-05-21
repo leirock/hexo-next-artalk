@@ -24,14 +24,18 @@ artalk:
   # Server address url, you should set this to your own link
   server: https://artalk.example.com
 
+  # Site name, you can set this to specify site for server
+  # or leave blank to use default site
+  site:
+
   # JS CDN url, you can set this to your preferred CDN
   jsUrl: https://unpkg.com/artalk@2/dist/Artalk.js
 
   # CSS styles CDN url, you can set this to your preferred CDN
   cssUrl: https://unpkg.com/artalk@2/dist/Artalk.css
 
-  # Pageviews count
-  pageview: true
+  # PV count
+  pvCount: true
 
   # Comments count
   commentCount: true
