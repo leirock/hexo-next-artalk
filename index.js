@@ -33,8 +33,6 @@ hexo.extend.filter.register('theme_inject', (injects) => {
   const config = utils.defaultConfigFile('artalk', 'default.yaml');
   if (!config.enable || !config.server) return;
 
-  if (config.pvCount) {
-
     injects.postMeta.raw(
       'artalk_comment_count',
       `
@@ -68,5 +66,4 @@ hexo.extend.filter.register('theme_inject', (injects) => {
       {}
     );
 
-  }
 });

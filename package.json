@@ -1,7 +1,7 @@
 {
   "name": "hexo-next-artalk",
-  "version": "0.0.1",
-  "description": "Artalk comment system for NexT.",
+  "version": "0.1.0",
+  "description": "Artalk comment plugin for Hexo NexT.",
   "keywords": [
     "Hexo",
     "NexT",

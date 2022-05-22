@@ -1,9 +1,9 @@
 # Artalk for Hexo NexT
 
-![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)
-![Artalk Version](https://img.shields.io/badge/Artalk-v2.3.1+-558fb5?style=flat-square)
+[![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)](https://github.com/next-theme/hexo-theme-next)
+[![Artalk Version](https://img.shields.io/badge/Artalk-v2.3.1+-558fb5?style=flat-square)](https://github.com/ArtalkJS/Artalk)
 
-An [Artalk](https://artalk.js.org) comment system plugin for Hexo NexT.
+[Artalk](https://artalk.js.org) comment plugin for Hexo NexT.
 
 ## Install
 
