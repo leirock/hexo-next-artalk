@@ -5,14 +5,16 @@
   "keywords": [
     "Hexo",
     "NexT",
-    "Artalk"
+    "Artalk",
+    "comment"
   ],
   "homepage": "https://github.com/leirock/hexo-next-artalk/#readme",
   "bugs": {
     "url": "https://github.com/leirock/hexo-next-artalk/issues"
   },
   "repository": {
-    "url": "https://github.com/leirock/hexo-next-artalk"
+    "type": "git",
+    "url": "https://github.com/leirock/hexo-next-artalk.git"
   },
   "license": "MIT",
   "author": "leirock <zdlzj@foxmail.com>",

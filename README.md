@@ -8,7 +8,7 @@
 ## Install
 
 ```bash
-npm install leirock/hexo-next-artalk
+npm install hexo-next-artalk
 ```
 
 ## Configure
@@ -40,4 +40,10 @@ artalk:
 
   # Comments count
   commentCount: true
+
+  # Dark mode
+  darkMode: auto
+
+  # Use backend to config
+  # useBackendConf: true
 ```

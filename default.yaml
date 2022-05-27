@@ -22,3 +22,9 @@ artalk:
 
   # Comments count
   commentCount: true
+
+  # Dark mode
+  darkMode: auto
+
+  # Use backend to config
+  # useBackendConf: true
