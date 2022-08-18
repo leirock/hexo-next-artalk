@@ -1,5 +1,5 @@
 {{ next_data('artalk', config.artalk, {
-  el: '#artalk',
+  el: '#comments',
   pageKey: url_for(page.path) | replace(r/index\.html$/, ''),
   pageTitle: page.title,
   locale: page.lang | default('zh-CN', true)
