@@ -35,8 +35,8 @@ artalk:
 
   # Frontend resources CDN, you can set this to your preferred CDN
   ## Reference: https://artalk.js.org/guide/frontend/install.html
-  jsUrl: https://unpkg.com/artalk@2/dist/Artalk.js
-  cssUrl: https://unpkg.com/artalk@2/dist/Artalk.css
+  jsUrl: https://artalk.example.com/dist/Artalk.js
+  cssUrl: https://artalk.example.com/dist/Artalk.css
 
   # Page views count
   pvCount: true
@@ -49,7 +49,7 @@ artalk:
 
   # Use backend to config
   ## Reference: https://artalk.js.org/guide/backend/fe-control.html
-  useBackendConf: false
+  useBackendConf: true
 ```
 
 ## Tips

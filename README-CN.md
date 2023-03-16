@@ -34,8 +34,8 @@ artalk:
 
   # 前端资源 CDN 地址，您可以修改为偏好的其他 CDN 镜像
   ## 参考：https://artalk.js.org/guide/frontend/install.html
-  jsUrl: https://unpkg.com/artalk@2/dist/Artalk.js
-  cssUrl: https://unpkg.com/artalk@2/dist/Artalk.css
+  jsUrl: https://artalk.example.com/dist/Artalk.js
+  cssUrl: https://artalk.example.com/dist/Artalk.css
 
   # 文章阅读数统计
   pvCount: true
@@ -48,7 +48,7 @@ artalk:
 
   # 在后端控制前端
   ## 参考：https://artalk.js.org/guide/backend/fe-control.html
-  useBackendConf: false
+  useBackendConf: true
 ```
 
 ## 贴士
