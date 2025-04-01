@@ -7,31 +7,26 @@
 <link rel="stylesheet" href="{{ config.artalk.cssUrl }}">
 <style>.artalk{width:initial;}</style>
 
-<script{{ pjax }} type="text/javascript">
-;(function() {
-  if (CONFIG.page.comments) {
+<script>
+document.addEventListener('page:loaded', function() {
+  const { el, jsUrl, server, site, pvCount, commentCount } = CONFIG.artalk;
 
-    NexT.utils.loadComments(CONFIG.artalk.el)
-      .then(() => NexT.utils.getScript(CONFIG.artalk.jsUrl, {
-        condition: window.Artalk 
-      }))
+  if (CONFIG.page.comments) {
+    NexT.utils.loadComments(el)
+      .then(() => NexT.utils.getScript(jsUrl, { condition: window.Artalk }))
       .then(() => {
         Artalk.init(CONFIG.artalk);
       });
-
   } else {
-
-    NexT.utils.getScript(CONFIG.artalk.jsUrl, {
-      condition: window.Artalk 
-    }).then(() => {
-      Artalk.loadCountWidget({
-        server: CONFIG.artalk.server,
-        site: CONFIG.artalk.site,
-        pvEl: '#ArtalkPV',
-        countEl: '#ArtalkCount',
+    NexT.utils.getScript(jsUrl, { condition: window.Artalk })
+      .then(() => {
+        Artalk.loadCountWidget({
+          server: server,
+          site: site,
+          pvEl: '#ArtalkPV',
+          countEl: '#ArtalkCount'
+        });
       });
-    })
-
   }
-})();
+});
 </script>
